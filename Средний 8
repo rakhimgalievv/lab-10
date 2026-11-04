@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Список задач — Lab 10</title>
+  <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+  <main class="container">
+    <p class="eyebrow">Лабораторная работа №10 · Средний уровень · Вариант 8</p>
+    <h1>Мои задачи</h1>
+    <p class="muted">Добавляйте задачи, отмечайте выполненные и удаляйте ненужные.</p>
+    <form id="task-form" class="add-row">
+      <input id="task-input" type="text" maxlength="100" placeholder="Что нужно сделать?" aria-label="Новая задача">
+      <button type="submit">Добавить</button>
+    </form>
+    <p id="message" class="message" aria-live="polite"></p>
+    <section class="panel">
+      <div class="summary"><span>Список задач</span><span id="counter">Всего: 0</span></div>
+      <ul id="task-list"></ul>
+      <p id="empty" class="empty">Пока задач нет. Добавьте первую!</p>
+    </section>
+  </main>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
