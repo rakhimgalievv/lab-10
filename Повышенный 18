@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Система заказов столовой — Lab 10</title>
+  <link rel="stylesheet" href="./styles/style.css">
+</head>
+<body>
+  <main class="container">
+    <p class="eyebrow">Лабораторная работа №10 · Повышенный уровень · Вариант 18</p>
+    <h1>Столовая кампуса</h1>
+    <p class="muted">Выберите блюда, сформируйте заказ и измените его статус.</p>
+    <div class="layout">
+      <section class="panel">
+        <h2>Меню</h2>
+        <div id="menu" class="menu-grid"></div>
+      </section>
+      <aside class="panel">
+        <h2>Текущий заказ</h2>
+        <ul id="order-items" class="order-items"></ul>
+        <p id="empty-order" class="muted">Заказ пока пуст.</p>
+        <div class="total"><span>Итого</span><strong id="total">0 ₸</strong></div>
+        <button id="place-order" class="primary">Оформить заказ</button>
+        <p id="message" class="message" aria-live="polite"></p>
+        <div class="status-box">
+          <label for="status">Статус заказа</label>
+          <select id="status">
+            <option value="Новый">Новый</option>
+            <option value="Готовится">Готовится</option>
+            <option value="Готов">Готов</option>
+            <option value="Выдан">Выдан</option>
+          </select>
+          <button id="update-status" class="secondary">Изменить статус</button>
+          <p id="current-status">Текущий статус: нет заказа</p>
+        </div>
+      </aside>
+    </div>
+  </main>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
